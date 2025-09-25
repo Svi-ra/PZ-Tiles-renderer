@@ -7,4 +7,4 @@ Right now, all the textures are procedural, generated with a random seed.
 I’m also adding different render layers like depth, shadow, normals, etc. It’s a bit more than strictly necessary, 
 but I’m curious whether it could eventually allow 2D tiles to be lit by dynamic light sources 🌝.
 
-![Rendered passes](preview.png)
+![Rendered passes](Preview.png)
