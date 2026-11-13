@@ -1,0 +1,832 @@
+{
+  "sheet": "location_community_park_01",
+  "sheet_size": [
+    1024,
+    2560
+  ],
+  "tile_size": [
+    128,
+    256
+  ],
+  "cols": 8,
+  "rows": 10,
+  "sprites": [
+    {
+      "file": "location_community_park_01_0.png",
+      "index": 0,
+      "col": 0,
+      "row": 0,
+      "cell": [
+        0,
+        0,
+        128,
+        256
+      ],
+      "content_bbox": [
+        81,
+        38,
+        128,
+        244
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_1.png",
+      "index": 1,
+      "col": 1,
+      "row": 0,
+      "cell": [
+        128,
+        0,
+        256,
+        256
+      ],
+      "content_bbox": [
+        64,
+        70,
+        115,
+        232
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_2.png",
+      "index": 2,
+      "col": 2,
+      "row": 0,
+      "cell": [
+        256,
+        0,
+        384,
+        256
+      ],
+      "content_bbox": [
+        0,
+        37,
+        72,
+        200
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_3.png",
+      "index": 3,
+      "col": 3,
+      "row": 0,
+      "cell": [
+        384,
+        0,
+        512,
+        256
+      ],
+      "content_bbox": [
+        0,
+        39,
+        72,
+        207
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_4.png",
+      "index": 4,
+      "col": 4,
+      "row": 0,
+      "cell": [
+        512,
+        0,
+        640,
+        256
+      ],
+      "content_bbox": [
+        0,
+        39,
+        72,
+        81
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_10.png",
+      "index": 10,
+      "col": 2,
+      "row": 1,
+      "cell": [
+        256,
+        256,
+        384,
+        512
+      ],
+      "content_bbox": [
+        54,
+        39,
+        126,
+        81
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_11.png",
+      "index": 11,
+      "col": 3,
+      "row": 1,
+      "cell": [
+        384,
+        256,
+        512,
+        512
+      ],
+      "content_bbox": [
+        54,
+        39,
+        126,
+        207
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_12.png",
+      "index": 12,
+      "col": 4,
+      "row": 1,
+      "cell": [
+        512,
+        256,
+        640,
+        512
+      ],
+      "content_bbox": [
+        54,
+        37,
+        126,
+        200
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_13.png",
+      "index": 13,
+      "col": 5,
+      "row": 1,
+      "cell": [
+        640,
+        256,
+        768,
+        512
+      ],
+      "content_bbox": [
+        11,
+        70,
+        64,
+        233
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_14.png",
+      "index": 14,
+      "col": 6,
+      "row": 1,
+      "cell": [
+        768,
+        256,
+        896,
+        512
+      ],
+      "content_bbox": [
+        0,
+        40,
+        47,
+        244
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_16.png",
+      "index": 16,
+      "col": 0,
+      "row": 2,
+      "cell": [
+        0,
+        512,
+        128,
+        768
+      ],
+      "content_bbox": [
+        8,
+        80,
+        125,
+        247
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_17.png",
+      "index": 17,
+      "col": 1,
+      "row": 2,
+      "cell": [
+        128,
+        512,
+        256,
+        768
+      ],
+      "content_bbox": [
+        8,
+        60,
+        118,
+        249
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_18.png",
+      "index": 18,
+      "col": 2,
+      "row": 2,
+      "cell": [
+        256,
+        512,
+        384,
+        768
+      ],
+      "content_bbox": [
+        8,
+        60,
+        118,
+        249
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_19.png",
+      "index": 19,
+      "col": 3,
+      "row": 2,
+      "cell": [
+        384,
+        512,
+        512,
+        768
+      ],
+      "content_bbox": [
+        1,
+        80,
+        118,
+        247
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_20.png",
+      "index": 20,
+      "col": 4,
+      "row": 2,
+      "cell": [
+        512,
+        512,
+        640,
+        768
+      ],
+      "content_bbox": [
+        29,
+        102,
+        123,
+        251
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_21.png",
+      "index": 21,
+      "col": 5,
+      "row": 2,
+      "cell": [
+        640,
+        512,
+        768,
+        768
+      ],
+      "content_bbox": [
+        10,
+        98,
+        117,
+        225
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_22.png",
+      "index": 22,
+      "col": 6,
+      "row": 2,
+      "cell": [
+        768,
+        512,
+        896,
+        768
+      ],
+      "content_bbox": [
+        0,
+        136,
+        95,
+        250
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_23.png",
+      "index": 23,
+      "col": 7,
+      "row": 2,
+      "cell": [
+        896,
+        512,
+        1024,
+        768
+      ],
+      "content_bbox": [
+        62,
+        127,
+        127,
+        239
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_24.png",
+      "index": 24,
+      "col": 0,
+      "row": 3,
+      "cell": [
+        0,
+        768,
+        128,
+        1024
+      ],
+      "content_bbox": [
+        0,
+        215,
+        126,
+        256
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_25.png",
+      "index": 25,
+      "col": 1,
+      "row": 3,
+      "cell": [
+        128,
+        768,
+        256,
+        1024
+      ],
+      "content_bbox": [
+        46,
+        239,
+        80,
+        256
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_26.png",
+      "index": 26,
+      "col": 2,
+      "row": 3,
+      "cell": [
+        256,
+        768,
+        384,
+        1024
+      ],
+      "content_bbox": [
+        50,
+        215,
+        126,
+        256
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_27.png",
+      "index": 27,
+      "col": 3,
+      "row": 3,
+      "cell": [
+        384,
+        768,
+        512,
+        1024
+      ],
+      "content_bbox": [
+        0,
+        216,
+        72,
+        256
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_28.png",
+      "index": 28,
+      "col": 4,
+      "row": 3,
+      "cell": [
+        512,
+        768,
+        640,
+        1024
+      ],
+      "content_bbox": [
+        0,
+        216,
+        80,
+        256
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_29.png",
+      "index": 29,
+      "col": 5,
+      "row": 3,
+      "cell": [
+        640,
+        768,
+        768,
+        1024
+      ],
+      "content_bbox": [
+        46,
+        215,
+        126,
+        256
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_32.png",
+      "index": 32,
+      "col": 0,
+      "row": 4,
+      "cell": [
+        0,
+        1024,
+        128,
+        1280
+      ],
+      "content_bbox": [
+        0,
+        215,
+        126,
+        256
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_33.png",
+      "index": 33,
+      "col": 1,
+      "row": 4,
+      "cell": [
+        128,
+        1024,
+        256,
+        1280
+      ],
+      "content_bbox": [
+        46,
+        239,
+        80,
+        256
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_34.png",
+      "index": 34,
+      "col": 2,
+      "row": 4,
+      "cell": [
+        256,
+        1024,
+        384,
+        1280
+      ],
+      "content_bbox": [
+        52,
+        215,
+        126,
+        256
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_35.png",
+      "index": 35,
+      "col": 3,
+      "row": 4,
+      "cell": [
+        384,
+        1024,
+        512,
+        1280
+      ],
+      "content_bbox": [
+        0,
+        216,
+        72,
+        256
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_36.png",
+      "index": 36,
+      "col": 4,
+      "row": 4,
+      "cell": [
+        512,
+        1024,
+        640,
+        1280
+      ],
+      "content_bbox": [
+        0,
+        216,
+        80,
+        256
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_37.png",
+      "index": 37,
+      "col": 5,
+      "row": 4,
+      "cell": [
+        640,
+        1024,
+        768,
+        1280
+      ],
+      "content_bbox": [
+        46,
+        215,
+        126,
+        256
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_40.png",
+      "index": 40,
+      "col": 0,
+      "row": 5,
+      "cell": [
+        0,
+        1280,
+        128,
+        1536
+      ],
+      "content_bbox": [
+        78,
+        155,
+        126,
+        246
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_41.png",
+      "index": 41,
+      "col": 1,
+      "row": 5,
+      "cell": [
+        128,
+        1280,
+        256,
+        1536
+      ],
+      "content_bbox": [
+        19,
+        145,
+        125,
+        255
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_42.png",
+      "index": 42,
+      "col": 2,
+      "row": 5,
+      "cell": [
+        256,
+        1280,
+        384,
+        1536
+      ],
+      "content_bbox": [
+        0,
+        156,
+        126,
+        239
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_43.png",
+      "index": 43,
+      "col": 3,
+      "row": 5,
+      "cell": [
+        384,
+        1280,
+        512,
+        1536
+      ],
+      "content_bbox": [
+        20,
+        140,
+        128,
+        209
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_44.png",
+      "index": 44,
+      "col": 4,
+      "row": 5,
+      "cell": [
+        512,
+        1280,
+        640,
+        1536
+      ],
+      "content_bbox": [
+        0,
+        167,
+        126,
+        222
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_45.png",
+      "index": 45,
+      "col": 5,
+      "row": 5,
+      "cell": [
+        640,
+        1280,
+        768,
+        1536
+      ],
+      "content_bbox": [
+        4,
+        146,
+        106,
+        255
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_46.png",
+      "index": 46,
+      "col": 6,
+      "row": 5,
+      "cell": [
+        768,
+        1280,
+        896,
+        1536
+      ],
+      "content_bbox": [
+        0,
+        156,
+        47,
+        250
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_47.png",
+      "index": 47,
+      "col": 7,
+      "row": 5,
+      "cell": [
+        896,
+        1280,
+        1024,
+        1536
+      ],
+      "content_bbox": [
+        38,
+        140,
+        106,
+        211
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_48.png",
+      "index": 48,
+      "col": 0,
+      "row": 6,
+      "cell": [
+        0,
+        1536,
+        128,
+        1792
+      ],
+      "content_bbox": [
+        10,
+        78,
+        120,
+        193
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_49.png",
+      "index": 49,
+      "col": 1,
+      "row": 6,
+      "cell": [
+        128,
+        1536,
+        256,
+        1792
+      ],
+      "content_bbox": [
+        51,
+        97,
+        123,
+        252
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_50.png",
+      "index": 50,
+      "col": 2,
+      "row": 6,
+      "cell": [
+        256,
+        1536,
+        384,
+        1792
+      ],
+      "content_bbox": [
+        0,
+        103,
+        100,
+        231
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_51.png",
+      "index": 51,
+      "col": 3,
+      "row": 6,
+      "cell": [
+        384,
+        1536,
+        512,
+        1792
+      ],
+      "content_bbox": [
+        42,
+        61,
+        116,
+        182
+      ],
+      "empty": false
+    },
+    {
+      "file": "location_community_park_01_52.png",
+      "index": 52,
+      "col": 4,
+      "row": 6,
+      "cell": [
+        512,
+        1536,
+        640,
+        1792
+      ],
+      "content_bbox": [
+        34,
+        92,
+        98,
+        244
+      ],
+      "empty": false
+    }
+  ]
+}
