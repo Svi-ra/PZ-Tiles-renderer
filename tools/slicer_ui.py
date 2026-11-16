@@ -12,6 +12,7 @@ import json
 import os
 import subprocess
 import sys
+import ssl
 import urllib.request
 import webbrowser
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -63,6 +64,7 @@ const $=id=>document.getElementById(id);
 let img=null, srcKind=null, srcVal=null, tiles=[];
 function setImg(blobOrUrl,name){
   const i=new Image(); i.onload=()=>{img=i;if(name&&!$('name').value)$('name').value=name;render()};
+  i.onerror=async()=>{let m='image failed to load';try{const r=await fetch(blobOrUrl);if(!r.ok)m=await r.text()}catch(e){}$('msg').textContent=m};
   i.src=blobOrUrl;
 }
 $('load').onclick=()=>{const u=$('url').value.trim();if(!u)return;
@@ -130,7 +132,12 @@ class H(BaseHTTPRequestHandler):
         if not url.startswith(("http://", "https://")):
             raise ValueError("only http(s) URLs")
         req = urllib.request.Request(url, headers={"User-Agent": "tilesheet-slicer"})
-        with urllib.request.urlopen(req, timeout=60) as r:
+        try:
+            import certifi  # Windows cert store can miss roots -> CERTIFICATE_VERIFY_FAILED
+            ctx = ssl.create_default_context(cafile=certifi.where())
+        except ImportError:
+            ctx = None
+        with urllib.request.urlopen(req, timeout=60, context=ctx) as r:
             return r.read()
 
     def do_GET(self):
