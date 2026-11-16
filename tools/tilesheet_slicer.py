@@ -35,7 +35,7 @@ def load(src: str) -> tuple[Image.Image, str]:
 
 
 def slice_sheet(img, name, out_root, cols=8, tile_w=None, tile_h=None,
-                trim=False, keep_empty=False):
+                trim=False, keep_empty=False, only=None):
     W, H = img.size
     tile_w = tile_w or W // cols
     tile_h = tile_h or tile_w * 2
@@ -55,9 +55,11 @@ def slice_sheet(img, name, out_root, cols=8, tile_w=None, tile_h=None,
             box = (c * tile_w, r * tile_h, (c + 1) * tile_w, (r + 1) * tile_h)
             tile = img.crop(box)
             bbox = tile.getchannel("A").getbbox()
-            if bbox is None and not keep_empty:
+            if bbox is None and not keep_empty and only is None:
                 continue
             idx = r * cols + c
+            if only is not None and idx not in only:
+                continue
             sprite = tile.crop(bbox) if (trim and bbox) else tile
             fname = f"{name}_{idx}.png"
             sprite.save(out / fname)

@@ -40,6 +40,8 @@ button{margin-top:8px;padding:6px 10px;width:100%;cursor:pointer}
 #sprites{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
 .sp{background:repeating-conic-gradient(#333 0 25%,#2b2b2b 0 50%) 0 0/12px 12px;text-align:center;font-size:11px}
 .sp canvas{display:block}
+.sp{cursor:pointer;border:2px solid transparent}
+.sp.sel{border-color:#0cf;background-color:#124}
 #msg{margin-top:10px;font-size:12px;color:#8c8;word-break:break-all}
 </style>
 <div id=side>
@@ -55,13 +57,14 @@ button{margin-top:8px;padding:6px 10px;width:100%;cursor:pointer}
  <label><input type=checkbox id=empty> Keep empty cells</label>
  <label>Save to folder</label><input type=text id=out>
  <button id=browse>Browse…</button>
- <button id=save>Save sprites</button>
+ <button id=save>Save all sprites</button>
+ <button id=clear style="display:none">Clear selection</button>
  <div id=msg></div>
 </div>
 <div id=main><div id=sheet><canvas id=cv></canvas><canvas id=grid></canvas></div><div id=sprites></div></div>
 <script>
 const $=id=>document.getElementById(id);
-let img=null, srcKind=null, srcVal=null, tiles=[];
+let img=null, srcKind=null, srcVal=null, tiles=[], selected=new Set();
 function setImg(blobOrUrl,name){
   const i=new Image(); i.onload=()=>{img=i;if(name&&!$('name').value)$('name').value=name;render()};
   i.onerror=async()=>{let m='image failed to load';try{const r=await fetch(blobOrUrl);if(!r.ok)m=await r.text()}catch(e){}$('msg').textContent=m};
@@ -95,10 +98,15 @@ function render(){
     const s=document.createElement('canvas'); s.width=sw; s.height=sh;
     s.getContext('2d').drawImage(img,c*tw+sx,r*th+sy,sw,sh,0,0,sw,sh);
     s.style.width=Math.min(sw,96)+'px'; s.style.height='auto';
-    const w=document.createElement('div'); w.className='sp'; w.append(s,r*cols+c); box.append(w);
+    const idx=r*cols+c; const w=document.createElement('div'); w.className='sp'+(selected.has(idx)?' sel':''); w.append(s,idx);
+    w.onclick=()=>{selected.has(idx)?selected.delete(idx):selected.add(idx);w.classList.toggle('sel');updSave()}; box.append(w);
   }
   $('msg').textContent=`${img.width}×${img.height} · tile ${tw}×${th} · ${n}/${cols*rows} sprites`;
 }
+function updSave(){$('save').textContent=selected.size?`Save selected (${selected.size})`:'Save all sprites';
+  $('clear').style.display=selected.size?'':'none'}
+$('clear').onclick=()=>{selected.clear();render();updSave()};
+updSave();
 fetch('/config').then(r=>r.json()).then(c=>{$('out').value=c.out});
 $('browse').onclick=async()=>{
   const r=await fetch('/browse?start='+encodeURIComponent($('out').value)); const p=await r.text();
@@ -107,6 +115,7 @@ $('browse').onclick=async()=>{
 $('save').onclick=async()=>{
   if(!img)return; const q=new URLSearchParams({out:$('out').value,name:$('name').value,cols:$('cols').value,
     tw:$('tw').value,th:$('th').value,trim:$('trim').checked?1:0,empty:$('empty').checked?1:0,kind:srcKind});
+  if(selected.size)q.set('only',[...selected].sort((a,b)=>a-b).join(','));
   let body; if(srcKind==='url'){q.set('url',srcVal);body=''} else body=await srcVal.arrayBuffer();
   $('msg').textContent='Saving…';
   const r=await fetch('/save?'+q,{method:'POST',body}); $('msg').textContent=await r.text();
@@ -181,7 +190,8 @@ class H(BaseHTTPRequestHandler):
             out, n, total = slice_sheet(
                 img, name, Path(q.get("out") or OUT), int(q.get("cols") or 8),
                 int(q.get("tw") or 0) or None, int(q.get("th") or 0) or None,
-                q.get("trim") == "1", q.get("empty") == "1")
+                q.get("trim") == "1", q.get("empty") == "1",
+                {int(x) for x in q["only"].split(",")} if q.get("only") else None)
             self._send(200, f"Saved {n}/{total} sprites to {out.resolve()}")
         except Exception as e:
             self._send(500, f"Error: {e}")
