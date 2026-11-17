@@ -1,0 +1,34 @@
+{
+  "sheet": "floors_exterior_natural_01",
+  "sheet_size": [
+    1024,
+    2048
+  ],
+  "tile_size": [
+    128,
+    256
+  ],
+  "cols": 8,
+  "rows": 8,
+  "sprites": [
+    {
+      "file": "floors_exterior_natural_01_0.png",
+      "index": 0,
+      "col": 0,
+      "row": 0,
+      "cell": [
+        0,
+        0,
+        128,
+        256
+      ],
+      "content_bbox": [
+        0,
+        192,
+        126,
+        256
+      ],
+      "empty": false
+    }
+  ]
+}
