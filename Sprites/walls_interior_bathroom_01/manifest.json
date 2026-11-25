@@ -1,0 +1,34 @@
+{
+  "sheet": "walls_interior_bathroom_01",
+  "sheet_size": [
+    1024,
+    3584
+  ],
+  "tile_size": [
+    128,
+    256
+  ],
+  "cols": 8,
+  "rows": 14,
+  "sprites": [
+    {
+      "file": "walls_interior_bathroom_01_70.png",
+      "index": 70,
+      "col": 6,
+      "row": 8,
+      "cell": [
+        768,
+        2048,
+        896,
+        2304
+      ],
+      "content_bbox": [
+        0,
+        0,
+        126,
+        226
+      ],
+      "empty": false
+    }
+  ]
+}

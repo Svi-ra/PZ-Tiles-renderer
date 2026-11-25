@@ -1,0 +1,34 @@
+{
+  "sheet": "lighting_indoor_02",
+  "sheet_size": [
+    1024,
+    2816
+  ],
+  "tile_size": [
+    128,
+    256
+  ],
+  "cols": 8,
+  "rows": 11,
+  "sprites": [
+    {
+      "file": "lighting_indoor_02_44.png",
+      "index": 44,
+      "col": 4,
+      "row": 5,
+      "cell": [
+        512,
+        1280,
+        640,
+        1536
+      ],
+      "content_bbox": [
+        2,
+        17,
+        65,
+        54
+      ],
+      "empty": false
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "sheet": "floors_interior_tilesandwood_01",
+  "sheet_size": [
+    1024,
+    4096
+  ],
+  "tile_size": [
+    128,
+    256
+  ],
+  "cols": 8,
+  "rows": 16,
+  "sprites": [
+    {
+      "file": "floors_interior_tilesandwood_01_12.png",
+      "index": 12,
+      "col": 4,
+      "row": 1,
+      "cell": [
+        512,
+        256,
+        640,
+        512
+      ],
+      "content_bbox": [
+        0,
+        192,
+        126,
+        256
+      ],
+      "empty": false
+    }
+  ]
+}

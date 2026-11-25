@@ -1,0 +1,34 @@
+{
+  "sheet": "location_hospitality_sunstarmotel_02",
+  "sheet_size": [
+    1024,
+    2048
+  ],
+  "tile_size": [
+    128,
+    256
+  ],
+  "cols": 8,
+  "rows": 8,
+  "sprites": [
+    {
+      "file": "location_hospitality_sunstarmotel_02_13.png",
+      "index": 13,
+      "col": 5,
+      "row": 1,
+      "cell": [
+        640,
+        256,
+        768,
+        512
+      ],
+      "content_bbox": [
+        1,
+        125,
+        106,
+        246
+      ],
+      "empty": false
+    }
+  ]
+}
